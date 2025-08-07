@@ -4,7 +4,9 @@
   gccForLibs,
   lib,
   stdenv,
-  version, # Must be specified
+  zlib,
+  risc0-src,
+  version ? "1.88.0",
 }:
 let
   # The known risczero toolchain versions
@@ -29,6 +31,7 @@ stdenv.mkDerivation {
 
   buildInputs = lib.optionals stdenv.isLinux [
     gccForLibs.lib
+    zlib
   ];
 
   dontStrip = true;

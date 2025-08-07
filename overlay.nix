@@ -1,11 +1,12 @@
-# risc0-overlay.nix
+{ risc0-src }:
+
 final: prev:
 let
   # Import the versions
   versions = import ./versions.nix;
 
   # Create RISC Zero toolchain
-  mkRisc0Toolchain = { version }: prev.callPackage ./pkgs/risc0-toolchain.nix { inherit version; };
+  mkRisc0Toolchain = { version }: prev.callPackage ./pkgs/risc0-toolchain.nix { inherit version risc0-src; };
 
   # Create all available toolchains from versions.nix
   risc0Toolchains = prev.lib.mapAttrs (version: _: mkRisc0Toolchain { inherit version; }) versions;
@@ -39,4 +40,7 @@ in
         cargoExtraArgs = (args.cargoExtraArgs or "") + " --target riscv32im-risc0-zkvm-elf";
       }
     );
+
+  # Expose RISC Zero toolchain at top level for easy access
+  risc0-toolchain = final.rust-bin.risc0.latest;
 }

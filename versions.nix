@@ -1,24 +1,16 @@
 # RISC Zero toolchain versions and their hashes
 # TODO: Automate the creation of this with an idempotent script
 {
-  "1.85.0" = {
-    date = "2025-03-13";
+  "1.88.0" = {
+    date = "2025-08-07";
     src = {
       x86_64-linux = {
-        url = "https://github.com/risc0/rust/releases/download/r0.1.85.0/rust-toolchain-x86_64-unknown-linux-gnu.tar.gz";
-        hash = "sha256-B2dOSbN2FbeNL7J2AcUJCSM8IfHxo6koFlgglySnrMs=";
-      };
-      aarch64-linux = {
-        url = "https://github.com/risc0/rust/releases/download/r0.1.85.0/rust-toolchain-aarch64-unknown-linux-gnu.tar.gz";
-        hash = "sha256-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=";
-      };
-      x86_64-darwin = {
-        url = "https://github.com/risc0/rust/releases/download/r0.1.85.0/rust-toolchain-x86_64-apple-darwin.tar.gz";
-        hash = "sha256-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC=";
+        url = "https://github.com/risc0/rust/releases/download/r0.1.88.0/rust-toolchain-x86_64-unknown-linux-gnu.tar.gz";
+        hash = "sha256-IiZReXuljwuv2VkZGkjSOzWzJm2eCC/En7TYRzMGT84=";
       };
       aarch64-darwin = {
-        url = "https://github.com/risc0/rust/releases/download/r0.1.85.0/rust-toolchain-aarch64-apple-darwin.tar.gz";
-        hash = "sha256-DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD=";
+        url = "https://github.com/risc0/rust/releases/download/r0.1.88.0/rust-toolchain-aarch64-apple-darwin.tar.gz";
+        hash = "sha256-89aj2+CVNvcWbP9T/V3tYyoLVAm3z6pSAkI/bDMjwEw=";
       };
     };
   };
